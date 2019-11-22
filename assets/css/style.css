@@ -1,25 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Righteous&display=swap");
 body {
-  padding-top: 10%;
+  padding-bottom: 50%;
   background-color: #ff9d00;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
 }
+body p, body ul li {
+  font-size: 21px;
+}
+body a {
+  color: #F25E08 !important;
+}
 @media (min-width: 1280px) {
   body {
-    max-width: 1920px;
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 section {
-  min-height: 100vh;
+  padding-top: 20%;
+}
+section span {
+  font-weight: bold;
+  font-family: "Righteous", cursive;
+  color: #F25E08;
+}
+@media (min-width: 1280px) {
+  section p, section ul {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 section.home p {
   color: #ECEFF1;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 section.home img {
   display: block;
@@ -57,19 +75,10 @@ section.home div {
 section.que-es-uniraid p {
   color: #ECEFF1;
   text-align: left;
-  line-height: 1rem;
-}
-section.que-es-uniraid span {
-  font-weight: bold;
+  line-height: 2rem;
 }
 section.que-es-uniraid .row div {
   align-self: center;
-}
-@media (min-width: 1280px) {
-  section.que-es-uniraid .row div {
-    border-left: 0.3rem solid #ECEFF1;
-    border-radius: 0.2rem;
-  }
 }
 section.que-es-uniraid img {
   display: block;
@@ -90,18 +99,84 @@ section.que-es-uniraid img:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+section.que-es-uniraid figure {
+  align-self: center;
+}
+section.solidaridad p {
+  color: #ECEFF1;
+  text-align: left;
+  line-height: 2rem;
+}
+section.solidaridad div {
+  align-self: center;
+}
+section.solidaridad img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.2rem;
+  width: 100%;
+}
+section.solidaridad img:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
 @media (min-width: 1280px) {
-  section.que-es-uniraid figure {
-    padding-right: 2.5rem;
+  section.solidaridad img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 }
+section.solidaridad img:hover {
+  -webkit-filter: grayscale(10%);
+  filter: grayscale(10%);
+}
+section.viaje p {
+  color: #ECEFF1;
+  text-align: left;
+  line-height: 2rem;
+}
+section.viaje div {
+  align-self: center;
+}
+section.viaje img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.2rem;
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  section.viaje img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+}
+section.viaje img:hover {
+  -webkit-filter: grayscale(10%);
+  filter: grayscale(10%);
+}
 
-.title {
-  font-size: 5rem;
+h1, h2 {
   color: #ECEFF1;
   text-align: center;
   line-height: 5.5rem;
   margin-bottom: 2.5rem;
+}
+h1.title, h2.title {
+  font-size: 5rem;
+}
+h1.sub-title, h2.sub-title {
+  font-size: 3rem;
+  font-family: "Amatic SC", cursive;
 }
 
 figure {
@@ -124,6 +199,11 @@ figure {
 ul {
   list-style: none;
   color: #ECEFF1;
+}
+ul li {
+  color: #ECEFF1;
+  text-align: left;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
