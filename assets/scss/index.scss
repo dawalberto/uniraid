@@ -2,6 +2,7 @@ $primary-color: #37474F;
 $radius: 0.2rem;
 $title-color: #ECEFF1;
 $paragraph-color: #ECEFF1;
+$border-color: #ECEFF1;
 $spacing: 2.5rem;
 
 @mixin horizontallyCenter() {
@@ -10,9 +11,36 @@ $spacing: 2.5rem;
   margin-right: auto;
 }
 
-@mixin text($color, $align) {
+@mixin text($color, $align, $line-heigh) {
   color: $color;
   text-align: $align;
+  line-height: $line-heigh;
+}
+
+@mixin zoomIn() {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@mixin grayScale($opacity, $opacity-hover) {
+  @media (min-width: 1280px) { 
+    -webkit-filter: grayscale($opacity);
+    filter: grayscale($opacity);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  &:hover {
+    -webkit-filter: grayscale($opacity-hover);
+    filter: grayscale($opacity-hover);
+  }
 }
 
 
@@ -23,7 +51,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 
-  @media (min-width: 960px) { 
+  @media (min-width: 1280px) { 
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -31,14 +59,16 @@ body {
 }
 
 section {
+  min-height: 100vh;
   &.home {
     p {
-      margin-top: $spacing;
-      @include text($paragraph-color, center);
+      @include text($paragraph-color, center, $spacing);
     }
 
     img {
       @include horizontallyCenter();
+      @include zoomIn();
+      @include grayScale(90%, 10%);
       border-radius: $radius;
       width: 100%;
     }
@@ -50,11 +80,42 @@ section {
       width: 50%;
     }
   }
+
+  &.que-es-uniraid {
+    p {
+      @include text($paragraph-color, left, 1rem);
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    .row div {
+      align-self: center;
+      @media (min-width: 1280px) {
+        border-left: 0.3rem solid $border-color;
+        border-radius: $radius;
+      }
+    }
+
+    img {
+      @include horizontallyCenter();
+      @include grayScale(90%, 0%);
+      border-radius: $radius;
+      width: 100%;
+    }
+
+    figure {
+      @media (min-width: 1280px) {
+        padding-right: 2.5rem;
+      }
+    }
+  }
 }
 
 .title {
   font-size: 5rem;
-  @include text($title-color, center);
+  @include text($title-color, center, 5.5rem);
   margin-bottom: $spacing;
 }
 
@@ -63,7 +124,7 @@ figure {
   width: 100%;
   border-radius: $radius;
 
-  @media (min-width: 960px) { 
+  @media (min-width: 1280px) { 
     @include horizontallyCenter();
     width: 50%;
     img {
@@ -77,26 +138,4 @@ ul {
   color: $paragraph-color;
 }
 
-/*GrayScale*/
-img {
-  -webkit-filter: grayscale(90%);
-  filter: grayscale(90%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-img:hover {
-  -webkit-filter: grayscale(60%);
-  filter: grayscale(60%);
-}
 
-/*Zoom In*/
- img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-img:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-}
