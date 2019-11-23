@@ -20,7 +20,7 @@ $h2-font-family: 'Amatic SC', cursive;
 @mixin text($color, $align, $line-heigh) {
   color: $color;
   text-align: $align;
-  line-height: $line-heigh;
+  // line-height: $line-heigh;
 }
 
 @mixin zoomIn() {
@@ -117,6 +117,22 @@ section {
       align-self: center;
     }
 
+    div#videoUniraid {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+
+      iframe {
+        border-radius: $radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     img {
       @include horizontallyCenter();
       @include grayScale(90%, 0%);
@@ -130,7 +146,7 @@ section {
     }
   }
 
-  &.solidaridad {
+  &.solidaridad, &.coche {
     p {
       @include text($paragraph-color, left, $line-heigh-spacing);
     }
@@ -146,7 +162,7 @@ section {
     }
   }
   
-  &.viaje {
+  &.viaje, &.que-hacemos-ayudanos {
     p {
       @include text($paragraph-color, left, $line-heigh-spacing);
     }

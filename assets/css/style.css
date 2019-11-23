@@ -38,7 +38,6 @@ section span {
 section.home p {
   color: #ECEFF1;
   text-align: center;
-  line-height: 2rem;
 }
 section.home img {
   display: block;
@@ -76,10 +75,24 @@ section.home div {
 section.que-es-uniraid p {
   color: #ECEFF1;
   text-align: left;
-  line-height: 2rem;
 }
 section.que-es-uniraid .row div {
   align-self: center;
+}
+section.que-es-uniraid div#videoUniraid {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+section.que-es-uniraid div#videoUniraid iframe {
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 section.que-es-uniraid img {
   display: block;
@@ -103,15 +116,14 @@ section.que-es-uniraid img:hover {
 section.que-es-uniraid figure {
   align-self: center;
 }
-section.solidaridad p {
+section.solidaridad p, section.coche p {
   color: #ECEFF1;
   text-align: left;
-  line-height: 2rem;
 }
-section.solidaridad div {
+section.solidaridad div, section.coche div {
   align-self: center;
 }
-section.solidaridad img {
+section.solidaridad img, section.coche img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -122,31 +134,30 @@ section.solidaridad img {
   border-radius: 0.2rem;
   width: 100%;
 }
-section.solidaridad img:hover {
+section.solidaridad img:hover, section.coche img:hover {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 @media (min-width: 1280px) {
-  section.solidaridad img {
+  section.solidaridad img, section.coche img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%);
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
 }
-section.solidaridad img:hover {
+section.solidaridad img:hover, section.coche img:hover {
   -webkit-filter: grayscale(10%);
   filter: grayscale(10%);
 }
-section.viaje p {
+section.viaje p, section.que-hacemos-ayudanos p {
   color: #ECEFF1;
   text-align: left;
-  line-height: 2rem;
 }
-section.viaje div {
+section.viaje div, section.que-hacemos-ayudanos div {
   align-self: center;
 }
-section.viaje img {
+section.viaje img, section.que-hacemos-ayudanos img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -154,14 +165,14 @@ section.viaje img {
   width: 100%;
 }
 @media (min-width: 1280px) {
-  section.viaje img {
+  section.viaje img, section.que-hacemos-ayudanos img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%);
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
 }
-section.viaje img:hover {
+section.viaje img:hover, section.que-hacemos-ayudanos img:hover {
   -webkit-filter: grayscale(10%);
   filter: grayscale(10%);
 }
@@ -169,7 +180,6 @@ section.viaje img:hover {
 h1, h2 {
   color: #ECEFF1;
   text-align: center;
-  line-height: 5.5rem;
   margin-bottom: 2.5rem;
 }
 @media (min-width: 1280px) {
@@ -210,7 +220,6 @@ ul {
 ul li {
   color: #ECEFF1;
   text-align: left;
-  line-height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
