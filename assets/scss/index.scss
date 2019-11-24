@@ -64,6 +64,7 @@ body {
   }
   a {
     color: $span-color !important;
+    text-decoration: underline;
   }
 
   @media (min-width: 1280px) { 
@@ -162,11 +163,53 @@ section {
     }
   }
   
-  &.viaje, &.que-hacemos-ayudanos {
+  &.viaje, &.que-hacemos-ayudanos, &.aqui-termina-todo {
     p {
       @include text($paragraph-color, left, $line-heigh-spacing);
     }
     div {
+      align-self: center;
+    }
+    img {
+      @include horizontallyCenter();
+      @include grayScale(90%, 10%);
+      border-radius: $radius;
+      width: 100%;
+    }
+  }
+
+  &.contacto {
+    text-align: center;
+
+    div {
+      align-self: center;
+    }
+    img {
+      width: 3rem;
+      height: auto;
+      margin-right: 0.5rem;
+      vertical-align: bottom;
+    }
+    a {
+      color: $paragraph-color !important;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      @include text($paragraph-color, left, $line-heigh-spacing);
+    }
+    ul {
+      display: inline-block;
+      li {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &.agradecimientos {
+    figure {
       align-self: center;
     }
     img {
@@ -219,5 +262,15 @@ ul {
     @include text($paragraph-color, left, $line-heigh-spacing);
   }
 }
+
+#progress {
+  border-bottom: 5px solid $span-color; 
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
 
 

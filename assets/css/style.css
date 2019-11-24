@@ -12,6 +12,7 @@ body p, body ul li {
 }
 body a {
   color: #F25E08 !important;
+  text-decoration: underline;
 }
 @media (min-width: 1280px) {
   body {
@@ -150,14 +151,14 @@ section.solidaridad img:hover, section.coche img:hover {
   -webkit-filter: grayscale(10%);
   filter: grayscale(10%);
 }
-section.viaje p, section.que-hacemos-ayudanos p {
+section.viaje p, section.que-hacemos-ayudanos p, section.aqui-termina-todo p {
   color: #ECEFF1;
   text-align: left;
 }
-section.viaje div, section.que-hacemos-ayudanos div {
+section.viaje div, section.que-hacemos-ayudanos div, section.aqui-termina-todo div {
   align-self: center;
 }
-section.viaje img, section.que-hacemos-ayudanos img {
+section.viaje img, section.que-hacemos-ayudanos img, section.aqui-termina-todo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -165,14 +166,65 @@ section.viaje img, section.que-hacemos-ayudanos img {
   width: 100%;
 }
 @media (min-width: 1280px) {
-  section.viaje img, section.que-hacemos-ayudanos img {
+  section.viaje img, section.que-hacemos-ayudanos img, section.aqui-termina-todo img {
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%);
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
 }
-section.viaje img:hover, section.que-hacemos-ayudanos img:hover {
+section.viaje img:hover, section.que-hacemos-ayudanos img:hover, section.aqui-termina-todo img:hover {
+  -webkit-filter: grayscale(10%);
+  filter: grayscale(10%);
+}
+section.contacto {
+  text-align: center;
+}
+section.contacto div {
+  align-self: center;
+}
+section.contacto img {
+  width: 3rem;
+  height: auto;
+  margin-right: 0.5rem;
+  vertical-align: bottom;
+}
+section.contacto a {
+  color: #ECEFF1 !important;
+  text-decoration: none;
+}
+section.contacto a:hover {
+  text-decoration: underline;
+}
+section.contacto p {
+  color: #ECEFF1;
+  text-align: left;
+}
+section.contacto ul {
+  display: inline-block;
+}
+section.contacto ul li {
+  margin-top: 1rem;
+}
+section.agradecimientos figure {
+  align-self: center;
+}
+section.agradecimientos img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.2rem;
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  section.agradecimientos img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+}
+section.agradecimientos img:hover {
   -webkit-filter: grayscale(10%);
   filter: grayscale(10%);
 }
@@ -220,6 +272,15 @@ ul {
 ul li {
   color: #ECEFF1;
   text-align: left;
+}
+
+#progress {
+  border-bottom: 5px solid #F25E08;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
 /*# sourceMappingURL=style.css.map */

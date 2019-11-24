@@ -27,3 +27,11 @@ let x = setInterval(() => {
     document.getElementById("cuentaAtras").innerHTML = "FINALIZADO! ⌛️";
   }
 }, 1000);
+
+let barProgress = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+
+  let max = document.body.scrollHeight - innerHeight;
+  barProgress.style.width = `${(pageYOffset / max) * 100}%`;
+
+});
