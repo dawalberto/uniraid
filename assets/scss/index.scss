@@ -176,6 +176,23 @@ section {
       border-radius: $radius;
       width: 100%;
     }
+    form {
+      border: 1px solid transparent;
+      padding: 10px;
+      box-shadow: 5px 10px 8px #888888;
+
+      background: rgb(255,172,46);
+      background: radial-gradient(circle, rgba(255,172,46,1) 0%, rgba(255,190,91,1) 100%);
+
+      border-radius: $radius;
+      @media (min-width: 1280px) {
+        width: 50%;
+      }
+      margin: auto;
+      input[type=image] {
+        width: 100%;
+      }
+    }
   }
 
   &.contacto {

@@ -177,6 +177,23 @@ section.viaje img:hover, section.que-hacemos-ayudanos img:hover, section.aqui-te
   -webkit-filter: grayscale(10%);
   filter: grayscale(10%);
 }
+section.viaje form, section.que-hacemos-ayudanos form, section.aqui-termina-todo form {
+  border: 1px solid transparent;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  background: #ffac2e;
+  background: radial-gradient(circle, #ffac2e 0%, #ffbe5b 100%);
+  border-radius: 0.2rem;
+  margin: auto;
+}
+@media (min-width: 1280px) {
+  section.viaje form, section.que-hacemos-ayudanos form, section.aqui-termina-todo form {
+    width: 50%;
+  }
+}
+section.viaje form input[type=image], section.que-hacemos-ayudanos form input[type=image], section.aqui-termina-todo form input[type=image] {
+  width: 100%;
+}
 section.contacto {
   text-align: center;
 }
