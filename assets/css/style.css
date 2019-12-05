@@ -180,11 +180,14 @@ section.viaje img:hover, section.que-hacemos-ayudanos img:hover, section.aqui-te
 section.viaje form, section.que-hacemos-ayudanos form, section.aqui-termina-todo form {
   border: 1px solid transparent;
   padding: 10px;
-  box-shadow: 5px 10px 8px #888888;
   background: #ffac2e;
   background: radial-gradient(circle, #ffac2e 0%, #ffbe5b 100%);
   border-radius: 0.2rem;
   margin: auto;
+}
+section.viaje form:hover, section.que-hacemos-ayudanos form:hover, section.aqui-termina-todo form:hover {
+  transition: all 0.2s ease-in-out 0s;
+  box-shadow: 5px 10px 8px #888888;
 }
 @media (min-width: 1280px) {
   section.viaje form, section.que-hacemos-ayudanos form, section.aqui-termina-todo form {
