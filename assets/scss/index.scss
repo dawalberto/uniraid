@@ -91,7 +91,7 @@ section {
 
   &.home {
     p {
-      @include text($paragraph-color, center, $line-heigh-spacing);
+      @include text($paragraph-color, left, $line-heigh-spacing);
     }
 
     img {

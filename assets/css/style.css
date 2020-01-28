@@ -39,7 +39,7 @@ section span {
 }
 section.home p {
   color: #ECEFF1;
-  text-align: center;
+  text-align: left;
 }
 section.home img {
   display: block;
